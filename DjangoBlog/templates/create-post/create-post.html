@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<h1 class="text-center p-5">Crie sua postagem</h1>
+<div class="container">
+    <form method="POST">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Titulo da postagem</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Como fazer suco de abacaxi">
+        </div>
+        
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Aqui fica o conteudo da sua postagem</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Coloque uma foto relacionada</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+          </form>
+          <button type="submit" class="btn btn-secondary btn-lg btn-block">Enviar</button>
+      </form>
+</div>
+
+
+
+{% endblock %}
