@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', home, name="home-page"),
     path('create-post/', create_post, name="create-post"),
-    path('login/', create_post, name="create-post"),
+    
 
 
     
