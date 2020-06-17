@@ -13,15 +13,17 @@ def home(request):
 
 
 def create_post(request):
-    if request.method == 'post':
+    if request.method == 'POST':
         form = CreatePostForm(request.POST)
+        print(form)
         if form.is_valid():
-
-            post_title = form.cleaned_data['title']
-            post_content = form.cleaned_data['content']
-            new_post = post_create_bd(title=post_title, content=post_content)
-            new_post.save()
-            return redirect('')
+            print('dentro')
+            #post_title = form.cleaned_data['title']
+            #post_content = form.cleaned_data['content']
+            #new_post = post_create_bd(title=post_title, content=post_content)
+            form.save()
+            #new_post.save()
+            return redirect('/')
         form = CreatePostForm()
         return render(request, 'create-post/create-post.html', {'form':form})
 

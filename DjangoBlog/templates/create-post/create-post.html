@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load bootstrap-class-filter %}
+
 {% block content %}
 
     <h1 class="text-center p-5">Crie sua postagem</h1>
@@ -11,20 +12,20 @@
               {{ form.title.errors }}
 
                 <label for="exampleFormControlInput1">Titulo da postagem</label>
-                {{ form.title | addClass:'form-control'}}
+                {{ form.title|addClass:'form-class' }}
             </div>
               
             <div class="form-group">
                 {{ form.content.errors }}
                 <label for="exampleFormControlTextarea1">Aqui fica o conteudo da sua postagem</label>
-                {{ form.content | addClass:'form-control'}}
+                {{ form.content|addClass:'form-class' }}
             </div>
             <!--<div class="form-group">
                 {{ form.img.errors }}
 
                 <label for="exampleFormControlFile1">Coloque uma foto relacionada</label>
                 
-                {{ form.img | addClass:'form-control-file' }}
+                {{ form.img }}
             </div>-->
             <div class="form-group">
                 <input type="submit" value="Enviar" class="btn btn-secondary btn-lg"/>
